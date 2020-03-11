@@ -24,7 +24,7 @@ jobs:
 
     steps:
     
-      - powershell: .\download-win-sdk.ps1
+      - powershell: ccid/templates/download-win-sdk.ps1
    
       - task: ExtractFiles@1
         inputs:
