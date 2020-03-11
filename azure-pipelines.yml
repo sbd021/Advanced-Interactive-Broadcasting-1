@@ -8,4 +8,4 @@ jobs:
       displayName: 'WindowsLiveStreaming'
       workingDirectory: 'Live-Streaming/Agora-Interactive-Broadcasting-Live-Streaming-Windows/LiveStreaming'
       scheme: 'Agora-Interactive-Broadcasting-Live-Streaming-Windows'
-      sdkurl: ${WindowsRTCSDK}
+      sdkurl: ${{ WindowsRTCSDK }}
