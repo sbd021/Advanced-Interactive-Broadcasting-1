@@ -22,7 +22,7 @@ jobs:
       buildConfiguration: 'Release'
 
     steps:
-      - powershell: download-win-sdk.ps1 "https://cn.bing.com"
+      - powershell: download-win-sdk.ps1
    
       - task: ExtractFiles@1
         inputs:
