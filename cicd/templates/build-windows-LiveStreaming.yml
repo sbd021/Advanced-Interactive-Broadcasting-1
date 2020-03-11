@@ -24,7 +24,7 @@ jobs:
 
     steps:
 
-      - powershell: .\download-win-sdk.ps1 "$(sdkurl)"
+      - powershell: .\download-win-sdk.ps1 "https://download.agora.io/sdk/release/Agora_Native_SDK_for_Windows(x86)_v2_9_3_FULL.zip"
    
       - task: ExtractFiles@1
         inputs:
