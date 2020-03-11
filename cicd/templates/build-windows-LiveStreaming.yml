@@ -23,7 +23,7 @@ jobs:
       sdkurl: 'https://download.agora.io/sdk/release/Agora_Native_SDK_for_Windows(x86)_v2_9_3_FULL.zip'
 
     steps:
-
+      - script: cd cicd/templates
       - powershell: .\download-win-sdk.ps1
    
       - task: ExtractFiles@1
