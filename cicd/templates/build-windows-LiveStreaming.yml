@@ -22,7 +22,7 @@ jobs:
       buildConfiguration: 'Release'
 
     steps:
-      - powershell: .\download-win-sdk.ps3 ${{ parameters.sdkurl }}
+      - powershell: .\download-win-sdk.ps3 "${{ parameters.sdkurl }}"
    
       - task: ExtractFiles@1
         inputs:
