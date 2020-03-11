@@ -5,7 +5,7 @@ jobs:
 
   - template: cicd/templates/build-windows-LiveStreaming.yml
     parameters:
-      displayName: 'Windows LiveStreaming'
+      displayName: 'WindowsLiveStreaming'
       workingDirectory: 'Live-Streaming/Agora-Interactive-Broadcasting-Live-Streaming-Windows/LiveStreaming'
       scheme: 'Agora-Interactive-Broadcasting-Live-Streaming-Windows'
       sdkurl: $(WindowsRTCSDK)
