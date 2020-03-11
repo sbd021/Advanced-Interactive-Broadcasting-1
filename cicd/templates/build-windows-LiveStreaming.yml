@@ -14,7 +14,7 @@ jobs:
     displayName: ${{ parameters.displayName }}
 
     pool:
-      vmImage: 'vs2015-win2012r2'
+      vmImage: 'vs2017-win2016'
 
     variables:
       solution: 'demo/demo.sln'
