@@ -48,5 +48,5 @@ jobs:
           rootFolderOrFile: '${{ parameters.workingDirectory }}/Release/'
           includeRootFolder: true
           archiveType: 'zip'
-          archiveFile: LiveStreaming.zip
+          archiveFile: LiveStreamingInjection.zip
           replaceExistingArchive: true
