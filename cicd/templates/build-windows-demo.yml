@@ -17,3 +17,38 @@ jobs:
     steps:
       - script: echo "${{ parameters.sdkurl }}"
       - powershell: cicd/script/downloadsdk.ps1 "${{ parameters.sdkurl }}"
+      
+      steps:
+      - task: ExtractFiles@1
+        inputs:
+          archiveFilePatterns: 'AgoraSDK.zip' 
+          destinationFolder: 'AgoraSDK'        
+
+  - job: ${{ parameters.displayName }}Build
+    displayName: ${{ parameters.displayName }}
+    dependsOn: downloadRTCSDK
+    
+    pool:
+      vmImage: 'vs2017-win2016'
+    variables:
+      LiveStreamingSolution: '${{ parameters.LiveStreamingWorkingDirectory }}/OpenLive.sln'
+      buildPlatform: 'win32'
+      buildConfiguration: 'Release'
+      
+    steps:
+      - script: echo "${{ parameters.sdkurl }}"
+      - powershell: cicd/script/downloadsdk.ps1 "${{ parameters.sdkurl }}"
+  
+      - task: CopyFiles@1
+        inputs:
+          sourceFolder: 'AgoraSDK/Agora_Native_SDK_for_Windows_v2.9.3_FULL/sdk'
+          targetFolder: ${{ parameters.LiveStreamingWorkingDirectory }}/sdk
+          overWrite: true
+          
+      - task: VSBuild@1
+        inputs:
+          solution: '$(LiveStreamingSolution)'
+          platform: '$(buildPlatform)'
+          configuration: '$(buildConfiguration)'
+          vsVersion: '15.0'
+          msbuildArchitecture: 'x86' 
