@@ -7,4 +7,5 @@ jobs:
     parameters:
       displayName: 'WindowsAdvancedInteractiveBroadcasting'
       LiveStreamingWorkingDirectory: 'Live-Streaming/Agora-Interactive-Broadcasting-Live-Streaming-Windows/LiveStreaming'
+						InjectionWorkingDirectory: ''
       sdkurl: $(WindowsRTCSDK)
