@@ -53,7 +53,7 @@ jobs:
           vsVersion: '15.0'
           msbuildArchitecture: 'x86'
 
-     - task: VSBuild@1
+     - task: VSBuild@2
         inputs:
           solution: '$(InjectionSolution)'
           platform: '$(buildPlatform)'
