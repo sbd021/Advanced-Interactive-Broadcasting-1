@@ -46,7 +46,7 @@ jobs:
           vsVersion: '15.0'
           msbuildArchitecture: 'x86'
 
-- job: ${{ parameters.displayName }}Build
+  - job: ${{ parameters.displayName }}Build
     displayName: ${{ parameters.displayName }}
 
     pool:
