@@ -3,16 +3,9 @@ variables:
  
 jobs:
     
-  - template: cicd/templates/build-windows-LiveStreaming.yml
+  - template: cicd/templates/build-windows-demo.yml
     parameters:
-      displayName: 'WindowsLiveStreaming'
-      workingDirectory: 'Live-Streaming/Agora-Interactive-Broadcasting-Live-Streaming-Windows/LiveStreaming'
-      scheme: 'Agora-Interactive-Broadcasting-Live-Streaming-Windows'
-      sdkurl: $(WindowsRTCSDK)
-
-  - template: cicd/templates/build-windows-LiveStreaming-Injection.yml
-    parameters:
-      displayName: 'WindowsLiveStreamingInjection'
-      workingDirectory: 'Live-Streaming-Injection\Agora-Interactive-Broadcasting-Live-Streaming-Injection-Windows'
-      scheme: 'Agora-Interactive-Broadcasting-Live-Streaming-Injection-Windows'
+      displayName: 'WindowsAdvancedInteractiveBroadcasting'
+      LiveStreamingWorkingDirectory: 'Live-Streaming/Agora-Interactive-Broadcasting-Live-Streaming-Windows/LiveStreaming'
+						InjectionWorkingDirectory: 'Live-Streaming-Injection\Agora-Interactive-Broadcasting-Live-Streaming-Injection-Windows'
       sdkurl: $(WindowsRTCSDK)
