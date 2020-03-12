@@ -23,7 +23,7 @@ jobs:
    
     steps:
 
-      - powershell: cicd/templates/downloadsdk.ps1
+      - powershell: cicd/script/downloadsdk.ps1
    
       - task: ExtractFiles@1
         inputs:
