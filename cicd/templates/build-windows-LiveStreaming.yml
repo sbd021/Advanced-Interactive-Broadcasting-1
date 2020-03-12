@@ -43,7 +43,7 @@ jobs:
           solution: '$(solution)'
           platform: '$(buildPlatform)'
           configuration: '$(buildConfiguration)'
-          vsVersion: '14.0'
+          vsVersion: '15.0'
           msbuildArchitecture: 'x86'
    
       - task: ArchiveFiles@2
