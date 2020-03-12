@@ -9,4 +9,3 @@ jobs:
       LiveStreamingWorkingDirectory: 'Live-Streaming/Agora-Interactive-Broadcasting-Live-Streaming-Windows/LiveStreaming'
       InjectionWorkingDirectory: 'Live-Streaming-Injection/Agora-Interactive-Broadcasting-Live-Streaming-Injection-Windows'  
       sdkurl: $(WindowsRTCSDK)
-

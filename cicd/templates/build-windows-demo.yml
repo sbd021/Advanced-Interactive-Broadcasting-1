@@ -33,14 +33,14 @@ jobs:
           
       - task: CopyFiles@2
         inputs:
-          sourceFolder: 'AgoraSDK/Agora_Native_SDK_for_Windows_v2.9.3_FULL/'
-          targetFolder: ${{ parameters.LiveStreamingWorkingDirectory }}
+          sourceFolder: 'AgoraSDK/Agora_Native_SDK_for_Windows_v2.9.3_FULL/sdk'
+          targetFolder: ${{ parameters.LiveStreamingWorkingDirectory }}/sdk
           overWrite: true
 
       - task: CopyFiles@2
         inputs:
-          sourceFolder: 'AgoraSDK/Agora_Native_SDK_for_Windows_v2.9.3_FULL/'
-          targetFolder: ${{ parameters.InjectionWorkingDirectory }}
+          sourceFolder: 'AgoraSDK/Agora_Native_SDK_for_Windows_v2.9.3_FULL/sdk'
+          targetFolder: ${{ parameters.InjectionWorkingDirectory }}/sdk
           overWrite: true
       
       - task: VSBuild@1
@@ -51,3 +51,10 @@ jobs:
           vsVersion: '15.0'
           msbuildArchitecture: 'x86'
 
+     - task: VSBuild@1
+        inputs:
+          solution: '$(LiveStreamingSolution)'
+          platform: '$(buildPlatform)'
+          configuration: '$(buildConfiguration)'
+          vsVersion: '15.0'
+          msbuildArchitecture: 'x86'
