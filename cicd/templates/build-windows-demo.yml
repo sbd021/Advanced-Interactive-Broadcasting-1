@@ -17,8 +17,7 @@ jobs:
     steps:
       - script: echo "${{ parameters.sdkurl }}"
       - powershell: cicd/script/downloadsdk.ps1 "${{ parameters.sdkurl }}"
-      
-      steps:
+
       - task: ExtractFiles@1
         inputs:
           archiveFilePatterns: 'AgoraSDK.zip' 
