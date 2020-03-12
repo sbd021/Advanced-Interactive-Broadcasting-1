@@ -18,7 +18,7 @@ jobs:
 
     variables:
       LiveStreamingSolution: '${{ parameters.LiveStreamingWorkingDirectory }}/OpenLive.sln'
-						InjectionSolution: '${{ parameters.InjectionWorkingDirectory }}/OpenLive.sln'
+      InjectionSolution: '${{ parameters.InjectionWorkingDirectory }}/OpenLive.sln'
       buildPlatform: 'win32'
       buildConfiguration: 'Release'
    
@@ -35,13 +35,13 @@ jobs:
         inputs:
           sourceFolder: 'AgoraSDK/Agora_Native_SDK_for_Windows_v2.9.3_FULL/'
           targetFolder: ${{ parameters.LiveStreamingWorkingDirectory }}
-										overWrite: true
+          overWrite: true
 
       - task: CopyFiles@3
         inputs:
           sourceFolder: 'AgoraSDK/Agora_Native_SDK_for_Windows_v2.9.3_FULL/'
           targetFolder: ${{ parameters.InjectionWorkingDirectory }}
-										overWrite: true
+          overWrite: true
 
       - script: cd ${{ parameters.LiveStreamingWorkingDirectory }} && ls
               
