@@ -24,7 +24,7 @@ jobs:
 
     steps:
       - script: ls && cd cicd/templates && ls
-      - powershell: ./downloadsdk.ps1
+      - powershell: cicd/templates/downloadsdk.ps1
    
       - task: ExtractFiles@1
         inputs:
